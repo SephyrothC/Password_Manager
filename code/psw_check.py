@@ -4,7 +4,7 @@ import string
 import math
 
 
-FILENAME = "data.csv"
+FILENAME = "data/data.csv"
 
 
 def check_secure(password):
