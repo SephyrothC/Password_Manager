@@ -1,4 +1,7 @@
-![intro](./OIG.VuXIADLbZf-removebg-preview.png)
+
+<p align="center">
+  <img src="./OIG.VuXIADLbZf-removebg-preview.png" />
+</p>
 
 # Content
 
