@@ -28,4 +28,6 @@ The Password Generator section allows you to generate a strong password.
 
 ## Password generator with sentence
 
+For the phrase password generator, simply enter a phrase such as "The pink kitten" and the program will generate a password using this phrase. It will also check whether the password in question is secure enough.
+
 
