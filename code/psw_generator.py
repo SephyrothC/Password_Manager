@@ -47,7 +47,7 @@ def santence_tranformation(string):
         # Add the character to the modified string
         modified_string += character
 
-    if check_psw_in_dataBase(modified_string) and check_password_in_Web(modified_string) and check_secure(modified_string) >= 50:
+    if not (check_psw_in_dataBase(modified_string)) and not (check_password_in_Web(modified_string)) and check_secure(modified_string) >= 50:
         # Display the modified string
         print("PassWord :", modified_string, "\n")
     else:
