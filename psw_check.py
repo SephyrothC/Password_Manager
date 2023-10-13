@@ -4,7 +4,7 @@ import string
 import math
 
 
-FILENAME = "donne.csv"
+FILENAME = "data.csv"
 
 
 def check_secure(password):
@@ -71,11 +71,20 @@ def check_password_in_Web(password):
     return leak
 
 
+# Read the data file
 def check_psw_in_dataBase(password):
+    # Assign the variable obvious_psw the list of obvious passwords read from the file FILENAME
     obvious_psw = read_data(FILENAME)
+
+    # For each password psw in the list obvious_psw
     for psw in obvious_psw:
+        # If the first element of psw is equal to the password given as a parameter
         if psw[0] == password:
+            # Print a warning message indicating that the password is too common and that it should be changed
             print(
                 "Your password is in the most common passwords used please change your password\n")
+            # Return the value True to indicate that the password is in the database
             return True
+
+    # If no password is equal to the password given, return the value False to indicate that the password is not in the database
     return False
