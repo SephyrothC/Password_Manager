@@ -11,6 +11,7 @@ def check_secure(password):
 
     # Initialized
     score = 0
+    entropia = 0
 
     letters_up = string.ascii_uppercase
     letters_low = string.ascii_lowercase
@@ -28,7 +29,8 @@ def check_secure(password):
         score += len(special_chars)
 
     # calculate the entropia
-    entropia = len(password)*math.log(score, 2)
+    if (score != 0):
+        entropia = len(password)*math.log(score, 2)
 
     return entropia
 

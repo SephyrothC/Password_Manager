@@ -22,7 +22,6 @@ def santence_tranformation(string):
         "o": "0",
         "s": "5",
     }
-    print(string)
 
     # Initialize the modified string
     modified_string = ""
@@ -40,7 +39,7 @@ def santence_tranformation(string):
             upper = False
         # If the character is a letter, convert it to lowercase
         elif character.isalpha():
-            character = character.lower()
+            # character = character.lower()
             # If the character exists in the dictionary, replace it with its value
             if character in leet_dict:
                 character = leet_dict[character]
@@ -49,7 +48,7 @@ def santence_tranformation(string):
 
     if not (check_psw_in_dataBase(modified_string)) and not (check_password_in_Web(modified_string)) and check_secure(modified_string) >= 50:
         # Display the modified string
-        print("PassWord :", modified_string, "\n")
+        print(f"PassWord :{modified_string} \n")
     else:
         print("This sentece is not strong enough")
 
