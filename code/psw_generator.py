@@ -48,22 +48,27 @@ def santence_tranformation(string):
 
     if not (check_psw_in_dataBase(modified_string)) and not (check_password_in_Web(modified_string)) and check_secure(modified_string) >= 50:
         # Display the modified string
-        print(f"PassWord :{modified_string} \n")
+        print(f"Password :{modified_string} \n")
     else:
-        print("This sentece is not strong enough")
+        print("This sentence is not strong enough")
 
 
 def password_generator():
 
     while (True):
         # Ask the user for the desired password size (12 is recommended)
-        size = input("What size of password do you want (12 minimum)\n")
+        size = input("What size of password do you want (12min - 32max)\n")
         # Check if the input is a valid number
         if check_string(size):
             # Convert the input to an integer
-            size = int(size)
-            if size >= 12:
+            size = float(size)
+            if size != round(size):
+                print("Error : input invalid !")
+                continue
+            if size >= 12 and size <= 32:
+                size = int(size)
                 break
+        print("Error : input invalid !")
 
     # Alphabet generator
     # Create a string of all possible characters: letters, digits, and special characters

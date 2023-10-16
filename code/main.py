@@ -80,6 +80,8 @@ def main():
             # Call the function sentence_transformation with the user's input as a parameter
             a = input("Enter your sentence :\n")
             santence_tranformation(a)
+        else:
+            print("Error : input invalid !")
 
     exit()
 
