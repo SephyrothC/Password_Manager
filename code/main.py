@@ -9,10 +9,10 @@ def password_checker(psw):
         while True:  # Start an infinite loop
             # Ask the user if they want a new password and store their answer in the variable res
             res = input("Do you want a new password ? Y/N \n")
-            if res == 'Y':  # If the user answers yes
+            if res == 'Y' or res == 'y':  # If the user answers yes
                 password_generator()  # Call the function password_generator to generate a new password
                 break  # Break out of the loop
-            elif res == 'N':  # If the user answers no
+            elif res == 'N' or res == 'n':  # If the user answers no
                 break  # Break out of the loop
 
     # If the password is not in the database but is found on the web
@@ -20,10 +20,10 @@ def password_checker(psw):
         while True:  # Start an infinite loop
             # Ask the user if they want a new password and store their answer in the variable res
             res = input("Do you want a new password ? Y/N \n")
-            if res == 'Y':  # If the user answers yes
+            if res == 'Y' or res == 'y':  # If the user answers yes
                 password_generator()  # Call the function password_generator to generate a new password
                 break  # Break out of the loop
-            elif res == 'N':  # If the user answers no
+            elif res == 'N' or res == 'n':  # If the user answers no
                 break  # Break out of the loop
 
     else:  # If the password is not in the database and not on the web
@@ -37,10 +37,10 @@ def password_checker(psw):
             while True:  # Start an infinite loop
                 # Ask the user if they want a new password and store their answer in the variable res
                 res = input("Do you want a new password ? Y/N \n")
-                if res == 'Y':  # If the user answers yes
+                if res == 'Y' or res == 'y':  # If the user answers yes
                     password_generator()  # Call the function password_generator to generate a new password
                     break  # Break out of the loop
-                elif res == 'N':  # If the user answers no
+                elif res == 'N' or res == 'n':  # If the user answers no
                     break  # Break out of the loop
 
         elif score <= 80:  # If the score is between 50 and 80
@@ -49,10 +49,10 @@ def password_checker(psw):
             while True:  # Start an infinite loop
                 # Ask the user if they want a new password and store their answer in the variable res
                 res = input("Do you want a new password ? Y/N \n")
-                if res == 'Y':  # If the user answers yes
+                if res == 'Y' or res == 'y':  # If the user answers yes
                     password_generator()  # Call the function password_generator to generate a new password
                     break  # Break out of the loop
-                elif res == 'N':  # If the user answers no
+                elif res == 'N' or res == 'n':  # If the user answers no
                     break  # Break out of the loop
 
         else:  # If the score is greater than 80
