@@ -1,15 +1,14 @@
 
 <p align="center">
-  <img src="./OIG.VuXIADLbZf-removebg-preview.png" />
+  <img src="./asset/ReadMe/OIG.VuXIADLbZf-removebg-preview.png" />
 </p>
 
 # Content
 
 - [Content](#content)
-  
-  - ![incon1](./OIG.-removebg-preview%20(2).png) [Password checker](#password-checker)
-  - ![incon2](OIG.-removebg-preview.png) [Password generator](#password-generator)
-  - ![incon1](OIG.-removebg-preview%20(1).png) [Password generator with sentence](#password-generator-with-sentence)
+  - [Password checker](#password-checker)
+  - [Password generator](#password-generator)
+  - [Password generator with sentence](#password-generator-with-sentence)
 
 ## Password checker
 

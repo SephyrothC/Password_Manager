@@ -2,9 +2,6 @@ import requests
 import hashlib
 import string
 import math
-import tkinter as tk
-from tkinter import messagebox
-from tkinter import simpledialog
 
 
 FILENAME = "data/data.csv"
@@ -66,13 +63,12 @@ def check_password_in_Web(password):
         # Check if the hash of the input password matches any of the leaked password hashes
         for h, count in hashes:
             if password_hash[5:] == h:
-                messagebox.showinfo(
-                    "Fuite de mot de passe", f"Le mot de passe a été divulgué {count} fois, changez votre mot de passe.")
+                print(
+                    f"Password has been leaked {count} times, change your password.\n")
                 leak = True
                 break
     else:
-        messagebox.showinfo(
-            "Erreur", "Impossible de vérifier le mot de passe.")
+        print("Could not check password.\n")
 
     return leak
 
@@ -87,8 +83,8 @@ def check_psw_in_dataBase(password):
         # If the first element of psw is equal to the password given as a parameter
         if psw[0] == password:
             # Print a warning message indicating that the password is too common and that it should be changed
-            messagebox.showinfo(
-                "Your password is in the most common passwords used please change your password")
+            print(
+                "Your password is in the most common passwords used please change your password\n")
             # Return the value True to indicate that the password is in the database
             return True
 

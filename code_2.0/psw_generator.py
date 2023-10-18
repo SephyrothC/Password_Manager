@@ -1,9 +1,6 @@
 import secrets
 import string
-from tkinter import simpledialog
 from psw_check import *
-import tkinter as tk
-from tkinter import messagebox
 
 
 def check_string(string):
@@ -50,38 +47,28 @@ def santence_tranformation(string):
         modified_string += character
 
     if not (check_psw_in_dataBase(modified_string)) and not (check_password_in_Web(modified_string)) and check_secure(modified_string) >= 50:
-        show_password(modified_string)
+        # Display the modified string
+        print(f"Password :{modified_string} \n")
     else:
-        messagebox.showinfo("Sécurité du mot de passe",
-                            "Cette phrase n'est pas assez forte.")
-
-
-def show_password(pwd):
-    dialog = tk.Toplevel()
-    dialog.title("Mot de passe")
-    password_entry = tk.Entry(dialog)
-    password_entry.insert(0, pwd)
-    password_entry.pack()
-    password_entry.focus_set()
-    password_entry.select_range(0, tk.END)
-    ok_button = tk.Button(dialog, text="OK", command=dialog.destroy)
-    ok_button.pack()
+        print("This sentence is not strong enough")
 
 
 def password_generator():
 
-    while True:
-        size = simpledialog.askstring(
-            "Taille du mot de passe", "Quelle taille de mot de passe voulez-vous ? (12min - 32max)")
+    while (True):
+        # Ask the user for the desired password size (12 is recommended)
+        size = input("What size of password do you want (12min - 32max)\n")
+        # Check if the input is a valid number
         if check_string(size):
+            # Convert the input to an integer
             size = float(size)
             if size != round(size):
-                messagebox.showinfo("Erreur", "Entrée invalide !")
+                print("Error : input invalid !")
                 continue
             if size >= 12 and size <= 32:
                 size = int(size)
                 break
-        messagebox.showinfo("Erreur", "Entrée invalide !")
+        print("Error : input invalid !")
 
     # Alphabet generator
     # Create a string of all possible characters: letters, digits, and special characters
@@ -113,4 +100,4 @@ def password_generator():
             break
 
     # Print the generated password
-    show_password(pwd)
+    print(f"{pwd}")
