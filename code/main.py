@@ -1,5 +1,7 @@
 from psw_check import *
 from psw_generator import *
+import tkinter as tk
+from tkinter import messagebox
 
 
 def password_checker(psw):
@@ -60,9 +62,21 @@ def password_checker(psw):
             print("Your password is strong")
 
 
+def check_password():
+    password = password_entry.get()
+    password_checker(password)
+
+
+def generate_password():
+    password_generator()
+
+
+def transform_sentence():
+    sentence = sentence_entry.get()
+
+
 def main():
 
-    check_psw_in_dataBase("chat")
     while True:
 
         option = input(
