@@ -87,5 +87,5 @@ def password_checker(psw):
 
 
 if __name__ == '__main__':
-    menu = interface.mainMenu()
+    menu = interface.App()
     menu.run()
