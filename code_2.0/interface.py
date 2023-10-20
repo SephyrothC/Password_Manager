@@ -1,16 +1,11 @@
 import pygame
 import sys
-import botton
 import pygame_gui
+import menu
+from settings import *
 
 
-WIDTH = 1280
-HEIGHT = 720
-
-IMG_WIDTH = 500
-IMG_HEIGHT = 500
-
-FPS = 60
+# Faire une chat box avec l'utilisateur sur lequel il affiche l'erreur inscit qu'un bloc chat pour interagir avec oui ou non
 
 
 class App():
@@ -24,36 +19,29 @@ class App():
         self.instance = "Main Menu"
         self.clock = pygame.time.Clock()
 
+        # Text import
+        self.manager = pygame_gui.UIManager((WIDTH, HEIGHT))
+        self.check_text_input = pygame_gui.elements.UITextEntryLine(relative_rect=pygame.Rect(
+            (200, 275), (900, 50)), manager=self.manager, object_id="#password_text_input")
+
     def run(self):
+
         while True:
+            UI_Refresh_Rate = self.clock.tick(FPS)/1000
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
 
+                self.manager.process_events(event)
+
             if self.instance == "Main Menu":
-
-                botton_password_checker = botton.Button(
-                    WIDTH/2, HEIGHT/2-150, "password_checker", 0.8)
-                botton_password_checker.draw(self.screen)
-
-                botton_password_generator = botton.Button(
-                    WIDTH/2, HEIGHT/2, "password_generator", 0.8)
-                botton_password_generator.draw(self.screen)
-
-                botton_sentence_generator = botton.Button(
-                    WIDTH/2, HEIGHT/2+150, "sentence_generator", 0.8)
-                botton_sentence_generator.draw(self.screen)
-
-                if botton_password_checker.clicked == True:
-                    self.instance = "Password Checker"
-                elif botton_password_generator.clicked == True:
-                    self.instance = "Password Generator"
-                elif botton_sentence_generator.clicked == True:
-                    self.instance = "Sentence Generator"
+                self.check_text_input.clear()
+                self.instance = menu.main_menu(self.screen)
 
             elif self.instance == "Password Checker":
-                pass
+                self.instance = menu.checker_menu(
+                    self.screen, UI_Refresh_Rate, self.manager)
 
             pygame.display.update()
             self.clock.tick(FPS)
