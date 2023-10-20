@@ -16,6 +16,12 @@ def checker_menu(screen, UI_Refresh_Rate, manager):
 
     screen.fill('black')
 
+    font = pygame.font.Font('freesansbold.ttf', 32)
+    text = font.render('Enter your password', True, "white")
+    textRect = text.get_rect()
+    textRect.center = (WIDTH/2, HEIGHT/2-150)
+    screen.blit(text, textRect)
+
     manager.update(UI_Refresh_Rate)
     manager.draw_ui(screen)
 
