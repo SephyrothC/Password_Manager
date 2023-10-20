@@ -41,7 +41,7 @@ class App():
 
             elif self.instance == "Password Checker":
                 self.instance = menu.checker_menu(
-                    self.screen, UI_Refresh_Rate, self.manager)
+                    self.screen, UI_Refresh_Rate, self.manager, self.check_text_input)
 
             pygame.display.update()
             self.clock.tick(FPS)

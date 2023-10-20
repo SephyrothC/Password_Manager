@@ -5,14 +5,16 @@ import botton
 from settings import *
 
 
-def checker_menu(screen, UI_Refresh_Rate, manager):
+def checker_menu(screen, UI_Refresh_Rate, manager, UI_text):
 
     for event in pygame.event.get():
         if event.type == pygame_gui.UI_TEXT_ENTRY_FINISHED and event.ui_object_id == "#password_text_input":
             test = check.password_checker(event.text)
-            if test:
+            if test == "strong":
                 print(test)
                 return "Main Menu"
+            else:
+                UI_text.clear()
 
     screen.fill('black')
 
