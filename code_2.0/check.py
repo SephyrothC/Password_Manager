@@ -7,7 +7,7 @@ def password_checker(psw):
 
     # If the password is in the database of obvious passwords
     if check_psw_in_dataBase(psw):
-        return "in data"
+        return "in my data"
         while True:  # Start an infinite loop
             # Ask the user if they want a new password and store their answer in the variable res
             res = input("Do you want a new password ? Y/N \n")
@@ -19,7 +19,7 @@ def password_checker(psw):
 
     # If the password is not in the database but is found on the web
     elif check_password_in_Web(psw):
-        return "in data"
+        return "in my data"
         while True:  # Start an infinite loop
             # Ask the user if they want a new password and store their answer in the variable res
             res = input("Do you want a new password ? Y/N \n")
@@ -48,7 +48,7 @@ def password_checker(psw):
 
         elif score <= 80:  # If the score is between 50 and 80
             # Print a message indicating that the password is acceptable for non-sensitive accounts
-            return ("non-vital accounts")
+            return ("ok non-vital accounts")
             while True:  # Start an infinite loop
                 # Ask the user if they want a new password and store their answer in the variable res
                 res = input("Do you want a new password ? Y/N \n")
