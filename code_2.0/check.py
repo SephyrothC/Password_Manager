@@ -48,7 +48,7 @@ def password_checker(psw):
 
         elif score <= 80:  # If the score is between 50 and 80
             # Print a message indicating that the password is acceptable for non-sensitive accounts
-            return ("ok non-vital accounts")
+            return ("ok for non-vital accounts")
             while True:  # Start an infinite loop
                 # Ask the user if they want a new password and store their answer in the variable res
                 res = input("Do you want a new password ? Y/N \n")

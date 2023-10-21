@@ -5,6 +5,28 @@ import botton
 from settings import *
 
 
+def sentence_menu(screen, UI_Refresh_Rate, manager, UI_text):
+
+    for event in pygame.event.get():
+        if event.type == pygame_gui.UI_TEXT_ENTRY_FINISHED and event.ui_object_id == "#password_text_input":
+            txt = event.text
+            UI_text.clear()
+            return txt
+
+    screen.fill('black')
+
+    font = pygame.font.Font('freesansbold.ttf', 32)
+    text = font.render('Enter your sentence', True, "white")
+    textRect = text.get_rect()
+    textRect.center = (WIDTH/2, HEIGHT/2-150)
+    screen.blit(text, textRect)
+
+    manager.update(UI_Refresh_Rate)
+    manager.draw_ui(screen)
+
+    return "Sentence Generator"
+
+
 def givePSW(screen, UI_Refresh_Rate, manager, UI_text):
     screen.fill('black')
 
@@ -12,7 +34,7 @@ def givePSW(screen, UI_Refresh_Rate, manager, UI_text):
     manager.draw_ui(screen)
 
     ok = botton.Button(
-        WIDTH/2, HEIGHT/2+150, "ok", 0.8)
+        WIDTH/2, HEIGHT/2+250, "ok", 0.8)
     ok.draw(screen)
 
     if ok.clicked == True:
@@ -98,8 +120,10 @@ def main_menu(screen):
         botton_password_checker.clicked = False
         return "Password Checker"
     elif botton_password_generator.clicked == True:
-        return "Password Generator"
+        botton_password_generator.clicked = False
+        return "Give password"
     elif botton_sentence_generator.clicked == True:
+        botton_sentence_generator.clicked = False
         return "Sentence Generator"
 
     return "Main Menu"

@@ -49,8 +49,9 @@ def santence_tranformation(string):
     if not (check_psw_in_dataBase(modified_string)) and not (check_password_in_Web(modified_string)) and check_secure(modified_string) >= 50:
         # Display the modified string
         print(f"Password :{modified_string} \n")
+        return modified_string
     else:
-        print("This sentence is not strong enough")
+        return "is not strong enough"
 
 
 def password_generator():
