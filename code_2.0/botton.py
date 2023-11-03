@@ -3,7 +3,7 @@ import pygame
 
 def ImgCreator(imageName):
     Play_img = pygame.image.load(
-        "asset/botton/" + imageName + ".png").convert_alpha()
+        "../asset/botton/" + imageName + ".png").convert_alpha()
     return Play_img
 
 

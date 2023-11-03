@@ -9,6 +9,7 @@
   - [Password checker](#password-checker)
   - [Password generator](#password-generator)
   - [Password generator with sentence](#password-generator-with-sentence)
+- [Use the exe if you want to try :smiley:](#use-the-exe-if-you-want-to-try-smiley)
 
 ## Password checker
 
@@ -29,3 +30,6 @@ The Password Generator section allows you to generate a strong password.
 ## Password generator with sentence
 
 For the phrase password generator, simply enter a phrase such as "The pink kitten" and the program will generate a password using this phrase. It will also check whether the password in question is secure enough.
+
+
+# Use the exe if you want to try :smiley:
