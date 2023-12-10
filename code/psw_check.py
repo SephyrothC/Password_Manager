@@ -4,7 +4,7 @@ import string
 import math
 
 
-FILENAME = "data/data.csv"
+FILENAME = "../data/data.csv"
 
 
 def check_secure(password):
@@ -63,12 +63,9 @@ def check_password_in_Web(password):
         # Check if the hash of the input password matches any of the leaked password hashes
         for h, count in hashes:
             if password_hash[5:] == h:
-                print(
-                    f"Password has been leaked {count} times, change your password.\n")
+                # print( f"Password has been leaked {count} times, change your password.\n")
                 leak = True
                 break
-    else:
-        print("Could not check password.\n")
 
     return leak
 
@@ -83,8 +80,8 @@ def check_psw_in_dataBase(password):
         # If the first element of psw is equal to the password given as a parameter
         if psw[0] == password:
             # Print a warning message indicating that the password is too common and that it should be changed
-            print(
-                "Your password is in the most common passwords used please change your password\n")
+            # print(
+            #     "Your password is in the most common passwords used please change your password\n")
             # Return the value True to indicate that the password is in the database
             return True
 
