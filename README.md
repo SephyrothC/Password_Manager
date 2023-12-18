@@ -32,7 +32,7 @@ The Password Generator section allows you to generate a strong password.
 For the phrase password generator, simply enter a phrase such as "The pink kitten" and the program will generate a password using this phrase. It will also check whether the password in question is secure enough.
 
 ```
-Copyright (c) 2022 by Sephyroth
+Copyright (c) 2023 by Sephyroth
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
